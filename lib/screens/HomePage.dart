@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:qapp/constants/constants.dart';
+import 'package:qapp/utils/UIHelper.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
 
-  HomePage({Key key, this.title}) : super(key: key);
+  HomePage({Key key, @required this.title}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -19,21 +21,27 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
       ),
       body: Container(
+        width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(20),
             bottomRight: Radius.circular(20),
           ),
-          color: Colors.deepPurple,
+          color: Colors.white,
         ),
-        child: Center(
-          child: Text(
-            'Welcome',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () => Navigator.pushNamed(context, RoutePaths.Second),
+              child: Text('Go To Second Page'),
             ),
-          ),
+            UIHelper.verticalSpaceMedium,
+            RaisedButton(
+              onPressed: () => Navigator.pushNamed(context, RoutePaths.Third),
+              child: Text('Go To Third Page'),
+            ),
+          ],
         ),
       ),
     );

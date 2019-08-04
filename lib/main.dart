@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qapp/screens/HomePage.dart';
+import 'package:qapp/constants/constants.dart';
+
+import 'Router.dart';
 
 void main() {
   // remove status bar bg color
@@ -20,7 +22,8 @@ class QuotesApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: HomePage(title: appName),
+      initialRoute: RoutePaths.Home,
+      onGenerateRoute: Router.onGenerateRoute,
     );
   }
 }
