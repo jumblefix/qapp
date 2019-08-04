@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qapp/constants/constants.dart';
-
 import 'Router.dart';
+import 'constants/RoutePaths.dart';
 
 void main() {
   // remove status bar bg color

@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:qapp/screens/HomePage.dart';
 import 'package:qapp/screens/SecondPage.dart';
 import 'package:qapp/screens/ThirdPage.dart';
-import 'constants/constants.dart';
+import 'constants/RoutePaths.dart';
 
 class Router {
   static Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
